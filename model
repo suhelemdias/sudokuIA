@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package model;
+
+import java.util.Random;
+
+/**
+ *
+ * @author sdias
+ */
+public class Board {
+    protected final int board[][] = new int[9][9];  
+    protected final boolean[][] boolBoard = new boolean[9][9];
+
+    // Insert a value in the board
+    public void SetBoard(int i, int j, int value, boolean able){
+        this.board[i][j] = value;
+        this.boolBoard[i][j] = able;
+    }
+    
+    public void SetBoardValue(int i, int j, int value){
+        this.board[i][j] = value;
+    }
+    
+    public int GetBoardValue(int i, int j){
+        return this.board[i][j];
+    }
+    
+    public boolean GetBoardAble(int i, int j){
+        return this.boolBoard[i][j];
+    }
+}
